@@ -1,0 +1,42 @@
+:root{
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Roboto', sans-serif;
+
+    --black: #211A1D;
+    --dark_purple: #6320EE;
+    --purple: #8075FF;
+    --light_purple: #F8F0FB;
+    --green: #CAD5CA;
+    --white: #FFFFFF;
+}
+*{box-sizing: border-box; margin:0}
+body{
+    overflow-y: hidden;
+}
+
+header{
+    width:100vw;
+    height:100vh;
+    background-image:url("../img/img_arriere_plan/chapitre2-4/ciel.png");
+    background-position: center;
+    object-fit: contain;
+    padding: 0;
+    padding-top:2vh;
+    position:relative;
+}
+
+.title{
+    color:var(--white);
+    font-size:5vh;
+    text-align: center;
+    font-family: "Press Start 2P";
+}
+.description{
+    text-align: center;
+    color: var(--white);
+    font-size:11px;
+    font-family:"Roboto";
+    position:absolute;
+    bottom:0;
+    left:1%;
+}
