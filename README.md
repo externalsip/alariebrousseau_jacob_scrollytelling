@@ -19,3 +19,4 @@ Projet scolaire dans le cadre du cours d'optimisation web, technique d'intégrat
 - CSS
 - Javascript
 - [GSAP](https://greensock.com)
+- [Scrolltrigger](https://greensock.com/scrolltrigger/)
