@@ -9,9 +9,9 @@
     --green: #CAD5CA;
     --white: #FFFFFF;
 }
-*{box-sizing: border-box; margin:0}
+*{box-sizing: border-box; margin:0; background-repeat: no-repeat;}
 body{
-    overflow-y: hidden;
+    overflow-x:hidden;
 }
 
 header{
@@ -23,6 +23,9 @@ header{
     padding: 0;
     padding-top:2vh;
     position:relative;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .title{
@@ -30,6 +33,8 @@ header{
     font-size:5vh;
     text-align: center;
     font-family: "Press Start 2P";
+    display:inline-block;
+    position:absolute;
 }
 .description{
     text-align: center;
@@ -39,4 +44,48 @@ header{
     position:absolute;
     bottom:0;
     left:1%;
+}
+
+.callAction{
+    width:4vw;
+    height:15vh;
+    border:var(--white) solid 2px;
+    border-radius:50px;
+    align-self:flex-end;
+    margin-bottom:5vh;
+}
+
+.circle{
+    width:20%;
+    aspect-ratio: 1/1;
+    background-color: var(--white);
+    border-radius: 100px;
+    margin: 0 auto;
+}
+
+section{
+    width:100vw;
+    height:100vh;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#chapitre2{
+    background-image: url("../img/img_arriere_plan/chapitre2-4/ciel.png");
+}
+#chapitre3{
+    background-image: url("../img/img_arriere_plan/chapitre2-4/ciel.png");
+}
+#chapitre4{
+    background-image: url("../img/img_arriere_plan/chapitre2-4/ciel.png");
+}
+#chapitre5{
+    background-image: url("../img/img_arriere_plan/chapitre5/parralaxe1.png");
+}
+#chapitre6{
+    background-image: url("../img/img_arriere_plan/chapitre6/ciel_aube.png");
+}
+#chapitre7{
+    background-image: url("../img/img_arriere_plan/chapitre7/colline.png");
 }
