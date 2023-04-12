@@ -6,5 +6,16 @@ Projet scolaire dans le cadre du cours d'optimisation web, technique d'intégrat
 
 ## Conception
 
--Jacob Alarie-Brousseau
--Quoc Huy Do
+- Jacob Alarie-Brousseau
+- Quoc Huy Do
+
+## Développement web
+
+- Jacob Alarie-Brousseau
+
+## Technologies
+
+- HTML
+- CSS
+- Javascript
+- [GSAP](https://greensock.com)
