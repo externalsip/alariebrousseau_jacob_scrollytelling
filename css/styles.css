@@ -103,4 +103,14 @@ Chapitre 2
 #route1{
     position:absolute;
     bottom:0;
+    z-index:3;
+}
+
+.building{
+    position: absolute;
+    z-index: 1;
+}
+.building.buidlingBackRow{
+    position: relative;
+    z-index: -1;
 }
