@@ -104,13 +104,94 @@ Chapitre 2
     position:absolute;
     bottom:0;
     z-index:3;
+    width:100%;
+    aspect-ratio: 960/17;
 }
-
 .building{
     position: absolute;
+    z-index: 2;
+    bottom:0;
+    width:8vw;
+}
+.buildingVar1{
+    aspect-ratio: 157/387;
+}
+.buildingVar2{
+    aspect-ratio: 157/450;
+}
+.buildingVar3{
+    aspect-ratio: 157/468;
+}
+.buildingBackRowVar1{
+    aspect-ratio: 172/591;
+}
+.buildingBackRowVar2{
+    aspect-ratio: 172/522;
+}
+.buildingBackRowVar3{
+    aspect-ratio: 172/639;
+}
+
+.building.buidlingBackRow{
     z-index: 1;
 }
-.building.buidlingBackRow{
-    position: relative;
-    z-index: -1;
+
+.building_construction{
+    width:12vw;
+    aspect-ratio: 320/862.38;
+    position:absolute;
+    bottom:0;
+    text-align: center;
 }
+
+.couche1{
+    width:100%;
+    aspect-ratio: 80/17;
+}
+.couche2{
+    width:100%;
+    aspect-ratio: 320/86.83;
+}
+.couche3{
+    width:91.5%;
+    aspect-ratio: 293/223;
+}
+.couche4{
+    width:91.5%;
+    aspect-ratio: 293/86.83;
+}
+.couche5{
+    width:83.75%;
+    aspect-ratio: 268/223;
+}
+.couche6{
+    width:83.75%;
+    aspect-ratio: 268/86.83;
+}
+.couche7{
+    width:77.5%;
+    aspect-ratio: 248/223;
+}
+.couche8{
+    width:77.5%;
+    aspect-ratio: 248/86.83;
+}
+.couche9{
+    width:76.15%;
+    aspect-ratio:230/221.38;
+}
+
+
+/*
+///////////////////////////////////////////////
+Chapitre 3
+///////////////////////////////////////////////
+*/
+
+#route2{
+    position:absolute;
+    width:100%;
+    bottom:0;
+    aspect-ratio:1920/61;
+}
+
