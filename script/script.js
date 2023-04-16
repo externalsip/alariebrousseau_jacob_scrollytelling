@@ -26,4 +26,9 @@ gsap.timeline({scrollTrigger: {
 .fromTo("#building6", {y:"100%", x:"100vw"}, {y:"0", duration: 2, ease: "sine.out"}, "-=4.7")
 .to("#building6", {x:"-20vw", duration:5, ease:"none"}, "<0.1")
 .fromTo("#building7", {y:"100%", x:"100vw"}, {y:"0", duration: 2, ease: "sine.out"}, "-=5.4")
-.to("#building7", {x:"-20vw", duration:5, ease:"none"}, "<0.1")
+.to("#building7", {x:"-20vw", duration:5, ease:"none"}, "<0.1");
+
+gsap.timeline({repeat:-1})
+.from("#auto1", {x:"-150vw", duration:4, ease: "sine.inOut"})
+.from("#auto2", {x:"-150vw", duration:4, ease:"sine.inOut"}, "-=3")
+.from("#auto3", {x:"-150vw", duration:4, ease:"sine.inOut"}, "-=3")

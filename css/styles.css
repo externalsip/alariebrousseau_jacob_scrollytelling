@@ -113,6 +113,10 @@ Chapitre 2
     bottom:0;
     width:8vw;
 }
+
+.building.buildingBackRow{
+    z-index: 1;
+}
 .buildingVar1{
     aspect-ratio: 157/387;
 }
@@ -130,10 +134,6 @@ Chapitre 2
 }
 .buildingBackRowVar3{
     aspect-ratio: 172/639;
-}
-
-.building.buidlingBackRow{
-    z-index: 1;
 }
 
 .building_construction{
@@ -193,5 +193,89 @@ Chapitre 3
     width:100%;
     bottom:0;
     aspect-ratio:1920/61;
+    z-index:3;
 }
 
+.arbre{
+    position:absolute;
+    z-index:2;
+    width:9vw;
+    bottom:1vw;
+    left:-10vw;
+}
+.arbre.arbreBackRow{
+    z-index: 1;
+}
+
+.arbreVar1{
+    aspect-ratio:193/390;
+}
+.arbreVar2{
+    aspect-ratio: 193/566;
+}
+.arbreVar3{
+    aspect-ratio: 245/335;
+}
+.arbreBackRowVar1{
+    aspect-ratio: 232/433;
+}
+.arbreBackRowVar2{
+    aspect-ratio: 169/373;
+}
+.arbreBackRowVar3{
+    aspect-ratio: 274/399;
+}
+
+.auto{
+    position:absolute;
+    z-index:4;
+    bottom:2.5vw;
+    width:12vw;
+    right:-20vw;
+}
+
+.autoVar1{
+    aspect-ratio: 43/16;
+}
+.autoVar2{
+    aspect-ratio: 42/17;
+}
+.autoVar3{
+    aspect-ratio: 21/10;
+}
+
+/*
+/////////////////////////////////////////////////////
+Chapitre 4
+/////////////////////////////////////////////////////
+*/
+
+#route3{
+    position:absolute;
+    width:49.11%;
+    bottom:0;
+    aspect-ratio:943/61;
+    z-index:3;
+}
+
+#rebords_trou{
+    position:absolute;
+    width:50.89%;
+    bottom:0;
+    right:0;
+    aspect-ratio: 971/25;
+    z-index:1;
+}
+
+.pont{
+    position:absolute;
+    width:50.89%;
+    bottom:-0.5vw;
+    right:0;
+    aspect-ratio: 983/161;
+}
+#pont_avant{
+    position: absolute;
+    width:100%;
+    z-index:2;
+}
