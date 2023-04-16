@@ -277,5 +277,103 @@ Chapitre 4
 #pont_avant{
     position: absolute;
     width:100%;
+    z-index:3;
+    bottom:0;
+}
+#pont_arriere{
+    position:absolute;
+    width: 100%;
+    z-index:5;
+    bottom:1.1vw;
+}
+#pont_shading{
+    position:absolute;
+    width: 100%;
+    bottom:0;
     z-index:2;
+}
+
+.vent{
+    width:30vw;
+    aspect-ratio:1095.33/252.51;
+    position:absolute;
+    top:40vh;
+    left:40vw;
+}
+
+/*
+/////////////////////////////////////////////////
+Chapitre 5
+/////////////////////////////////////////////////
+*/
+
+.poisson{
+    position:absolute;
+    width:7vw;
+    aspect-ratio:235.72/120.4;
+}
+
+#poisson1{
+    left:60%;
+    top:20%;
+}
+
+#poisson2{
+    left:40%;
+    top:40%;
+}
+
+/*
+/////////////////////////////////////////////////
+Chapitre 6
+/////////////////////////////////////////////////
+*/
+
+#soleil{
+    width:20vw;
+    aspect-ratio: 1/1;
+    position:absolute;
+    top:5vw;
+    left:70vw;
+}
+
+.nuage{
+    width:15vw;
+    position:absolute;
+    aspect-ratio:1/1;
+}
+
+#nuage1{
+    top:10vh;
+    left:20vw;
+}
+
+#nuage2{
+    top:5vh;
+    left:65vw;
+}
+
+#nuage3{
+    top:20vh;
+    left:80vw;
+}
+
+#nuage4{
+    top:60vh;
+    left:50vw;
+}
+
+#nuage5{
+    top:75vh;
+    left:68vw;
+}
+
+#nuage6{
+    top:55vh;
+    left:20vw;
+}
+
+#nuage7{
+    top:39vh;
+    left:39vw;
 }

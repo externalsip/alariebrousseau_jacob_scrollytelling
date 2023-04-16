@@ -32,3 +32,12 @@ gsap.timeline({repeat:-1})
 .from("#auto1", {x:"-150vw", duration:4, ease: "sine.inOut"})
 .from("#auto2", {x:"-150vw", duration:4, ease:"sine.inOut"}, "-=3")
 .from("#auto3", {x:"-150vw", duration:4, ease:"sine.inOut"}, "-=3")
+
+gsap.fromTo(".poisson", {rotation:5}, {rotation:-5, yoyo:true, repeat:-1, ease:"sine.inOut", duration:2})
+gsap.from("#poisson1", {x:"-50vw", duration: 60})
+gsap.from("#poisson2", {x:"-50vw", duration: 60})
+
+gsap.fromTo("#soleil", {scale: 0.9}, {scale: 1.1, duration:3, yoyo:true, ease:"sine.inOut", repeat:-1})
+
+gsap.fromTo(".nuage", {opacity:0.6}, {opacity: 1, duration:2, yoyo:true, ease:"sine.inOut", repeat:-1})
+gsap.fromTo(".nuage", {y:5}, {y:-5, duration:3, yoyo:true, ease:"sine.inOut", repeat:-1, stagger:1})
