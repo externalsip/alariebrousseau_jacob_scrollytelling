@@ -510,7 +510,7 @@ Test
     width:20vw;
     aspect-ratio: 1/1;
     background-size:120vw 100%;
-    animation:walk 1s infinite;
+    animation:fall 0.5s infinite;
     animation-timing-function: steps(6);
     animation-play-state: paused;
 }
@@ -528,3 +528,7 @@ Test
     to{background-position: -120vw 0;}
 }
 
+@keyframes fall{
+    from {background-position: 0 0;}
+    to{background-position: -120vw 0;}
+}
