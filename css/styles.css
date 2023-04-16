@@ -480,3 +480,51 @@ Chapitre 7
     right:0;
     top:5vh;
 }
+
+/*
+////////////////////////////////////////////////////
+Test
+////////////////////////////////////////////////////
+*/
+
+.spritesheet_testBody{
+    height:150vh;
+}
+
+.spritesheet_test{
+    position:relative;
+    display:inline-block;
+    background-image: url("../img/img_personnages/character_walk.png");
+    width:20vw;
+    aspect-ratio: 1/1;
+    background-size:120vw 100%;
+    animation:walk 1s infinite;
+    animation-timing-function: steps(6);
+    animation-play-state: paused;
+}
+
+.spritesheet_test2{
+    position:relative;
+    display:inline-block;
+    background-image: url("../img/img_personnages/character_fall.png");
+    width:20vw;
+    aspect-ratio: 1/1;
+    background-size:120vw 100%;
+    animation:walk 1s infinite;
+    animation-timing-function: steps(6);
+    animation-play-state: paused;
+}
+
+.is-scrolling .spritesheet_test{
+    animation-play-state: running;
+}
+
+.is-scrolling .spritesheet_test2{
+    animation-play-state: running;
+}
+
+@keyframes walk{
+    from {background-position: 0 0;}
+    to{background-position: -120vw 0;}
+}
+
