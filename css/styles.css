@@ -1,3 +1,9 @@
+/*
+///////////////////////////////////////////////////////////
+Général
+///////////////////////////////////////////////////////////
+*/
+
 :root{
     font-family: 'Press Start 2P', cursive;
     font-family: 'Roboto', sans-serif;
@@ -75,6 +81,10 @@ section{
     position:relative;
 }
 
+#chapitre1{
+    background-image:url("../img/img_arriere_plan/chapitre1/background_chapitre1.png");
+}
+
 #chapitre2{
     background-image: url("../img/img_arriere_plan/chapitre2-4/background-chapitre2-4.png");
 }
@@ -92,6 +102,63 @@ section{
 }
 #chapitre7{
     background-image: url("../img/img_arriere_plan/chapitre7/background-chapitre7.png");
+}
+
+.text{
+    font-family:'Roboto';
+    font-size:1vw;
+    color:white;
+    position:absolute;
+}
+
+.textbox{
+    width:40vw;
+    height:15vh;
+    background-color:var(--black);
+    position:absolute;
+    border-radius: 10px;
+    padding:5px;
+    border:1px solid var(--white);
+}
+
+
+/*
+///////////////////////////////////////////////////////////
+Chapitre 1
+///////////////////////////////////////////////////////////
+*/
+
+#lit{
+    width:20vw;
+    aspect-ratio: 573/95;
+    position:absolute;
+    bottom:1vh;
+    left:5vw;
+}
+
+.cadre{
+    width:10vw;
+    position:absolute;
+}
+.cadreVar1{
+    aspect-ratio:146/207;
+}
+.cadreVar2{
+    aspect-ratio:195/320;
+}
+
+#cadre1{
+    top:35vh;
+    left:60vw;
+}
+#cadre2{
+    top:32vh;
+    left:10vw;
+}
+
+.chapitre1Text{
+    right:0;
+    top:5vh;
 }
 
 /*
@@ -181,6 +248,11 @@ Chapitre 2
     aspect-ratio:230/221.38;
 }
 
+.chapitre2Text{
+    right:0;
+    top:5vh;
+}
+
 
 /*
 ///////////////////////////////////////////////
@@ -244,6 +316,11 @@ Chapitre 3
     aspect-ratio: 21/10;
 }
 
+.chapitre3Text{
+    right:0;
+    top:5vh;
+}
+
 /*
 /////////////////////////////////////////////////////
 Chapitre 4
@@ -289,7 +366,7 @@ Chapitre 4
 #pont_shading{
     position:absolute;
     width: 100%;
-    bottom:0;
+    bottom:0vh;
     z-index:2;
 }
 
@@ -299,6 +376,11 @@ Chapitre 4
     position:absolute;
     top:40vh;
     left:40vw;
+}
+
+.chapitre4Text{
+    left:0;
+    top:5vh;
 }
 
 /*
@@ -321,6 +403,11 @@ Chapitre 5
 #poisson2{
     left:40%;
     top:40%;
+}
+
+.chapitre5Text{
+    left:0;
+    top:5vh;
 }
 
 /*
@@ -376,4 +463,20 @@ Chapitre 6
 #nuage7{
     top:39vh;
     left:39vw;
+}
+
+.chapitre6Text{
+    left:0;
+    top:5vh;
+}
+
+/*
+///////////////////////////////////////////////////////
+Chapitre 7
+///////////////////////////////////////////////////////
+*/
+
+.chapitre7Text{
+    right:0;
+    top:5vh;
 }
