@@ -137,7 +137,7 @@ Chapitre 2
 }
 
 .building_construction{
-    width:12vw;
+    width:10vw;
     aspect-ratio: 320/862.38;
     position:absolute;
     bottom:0;
@@ -231,7 +231,7 @@ Chapitre 3
     z-index:4;
     bottom:2.5vw;
     width:12vw;
-    right:-20vw;
+    right:-15vw;
 }
 
 .autoVar1{
@@ -270,7 +270,7 @@ Chapitre 4
 .pont{
     position:absolute;
     width:50.89%;
-    bottom:-0.5vw;
+    bottom:0;
     right:0;
     aspect-ratio: 983/161;
 }
