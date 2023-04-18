@@ -23,7 +23,7 @@ body{
 header{
     width:100vw;
     height:100vh;
-    background-image:url("../img/img_arriere_plan/chapitre2-4/background-chapitre2-4.png");
+    background-image:url("../img/img_arriere_plan/header/header_bg.png");
     background-size:cover;
     background-position: center;
     aspect-ratio: 16/9;
