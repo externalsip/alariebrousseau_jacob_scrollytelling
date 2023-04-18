@@ -82,7 +82,10 @@ section{
 }
 
 #chapitre1{
+    background-color: var(--dark_purple);
+    /*
     background-image:url("../img/img_arriere_plan/chapitre1/background_chapitre1.png");
+    */
 }
 
 #chapitre2{
@@ -128,6 +131,8 @@ Chapitre 1
 ///////////////////////////////////////////////////////////
 */
 
+/*
+
 #lit{
     width:20vw;
     aspect-ratio: 573/95;
@@ -154,6 +159,34 @@ Chapitre 1
 #cadre2{
     top:32vh;
     left:10vw;
+}
+
+*/
+
+.salle{
+    width:90vw;
+    aspect-ratio: 2044/420;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+.corridor{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    aspect-ratio: 2044/420;
+    z-index: 1;
+    image-rendering: pixelated;
+}
+
+.porte{
+    z-index:2;
+    position:absolute;
+    height: 100%;
+    right:0;
+    image-rendering: pixelated;
 }
 
 .chapitre1Text{
@@ -304,6 +337,7 @@ Chapitre 3
     bottom:2.5vw;
     width:12vw;
     right:-15vw;
+    image-rendering: pixelated;
 }
 
 .autoVar1{
@@ -428,6 +462,7 @@ Chapitre 6
     width:15vw;
     position:absolute;
     aspect-ratio:1/1;
+    image-rendering: pixelated;
 }
 
 #nuage1{
@@ -479,6 +514,16 @@ Chapitre 7
 .chapitre7Text{
     right:0;
     top:5vh;
+}
+
+#nuage8{
+    top:30vh;
+    left:50vw;
+}
+
+#nuage9{
+    top:10vh;
+    left:10vw;
 }
 
 /*

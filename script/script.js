@@ -10,7 +10,6 @@ gsap.timeline({scrollTrigger: {
     pin:true,
     scrub:true,
     trigger:chapitre2,
-    markers:true,
     end:"500% top"
 }})
 .fromTo("#building1", {y:"100%", x:"100vw"}, {y:"0", duration: 2, ease: "sine.out"})
