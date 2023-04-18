@@ -164,7 +164,7 @@ Chapitre 1
 */
 
 .salle{
-    width:90vw;
+    width:200vw;
     aspect-ratio: 2044/420;
     position:absolute;
     bottom:0;
@@ -546,6 +546,7 @@ Test
     animation:walk 1s infinite;
     animation-timing-function: steps(6);
     animation-play-state: paused;
+    z-index: 3;
 }
 
 .spritesheet_test2{
