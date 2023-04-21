@@ -164,11 +164,12 @@ Chapitre 1
 */
 
 .salle{
-    width:200vw;
+    width:180vw;
     aspect-ratio: 2044/420;
     position:absolute;
     bottom:0;
     left:0;
+    z-index:1;
 }
 
 .corridor{
@@ -192,6 +193,7 @@ Chapitre 1
 .chapitre1Text{
     right:0;
     top:5vh;
+    z-index: 2;
 }
 
 /*
