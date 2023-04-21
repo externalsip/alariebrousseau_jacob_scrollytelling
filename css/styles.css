@@ -17,7 +17,7 @@ Général
 }
 *{box-sizing: border-box; margin:0; background-repeat: no-repeat;}
 body{
-    overflow-x:hidden;
+    /*overflow-x:hidden;*/
 }
 
 header{
@@ -83,9 +83,8 @@ section{
 
 #chapitre1{
     background-color: var(--dark_purple);
-    /*
     background-image:url("../img/img_arriere_plan/chapitre1/background_chapitre1.png");
-    */
+    
 }
 
 #chapitre2{
