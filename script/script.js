@@ -1,14 +1,12 @@
 gsap.registerPlugin(ScrollTrigger);
 
-
-
 let spritesheetCh1 = document.querySelectorAll(".spritesheet1");
 const chapitre1 = document.getElementById("chapitre1");
+
 gsap.timeline({scrollTrigger: {
     pin:true,
     scrub:true,
     trigger:chapitre1,
-    markers:true,
     end: "600% top",
     onUpdate: (self) => {
         if(self.direction == 1){
