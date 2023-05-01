@@ -26,7 +26,7 @@ gsap.timeline({scrollTrigger: {
         })
     }
 }})
-.fromTo(chapitre1, {backgroundPositionX: 0}, {backgroundPositionX: "-180vw"})
+.fromTo("spritesheet", {backgroundPositionX: 0}, {backgroundPositionX: "-180vw"})
 .fromTo(document.querySelector(".porte"), {x: 0}, {x: "-180vw"}, '<')
 
 
