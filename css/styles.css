@@ -83,7 +83,12 @@ section{
 
 #chapitre1{
     background-color: var(--dark_purple);
-    background-image:url("../img/img_arriere_plan/chapitre1/background_chapitre1.png");
+    background-image:url("../img/img_elements_visuels/chapitre1/corridor.png");
+    background-size: 180vmax;
+    aspect-ratio: 2044/420;;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-position-x: 0;
     
 }
 
@@ -163,7 +168,7 @@ Chapitre 1
 */
 
 .salle{
-    width:180vw;
+    width:180vmax;
     aspect-ratio: 2044/420;
     position:absolute;
     bottom:0;
@@ -176,8 +181,7 @@ Chapitre 1
     bottom:0;
     left:0;
     width:100%;
-    aspect-ratio: 2044/420;
-    z-index: 1;
+    z-index: 3;
     image-rendering: pixelated;
 }
 
@@ -190,9 +194,71 @@ Chapitre 1
 }
 
 .chapitre1Text{
-    right:0;
+    right:2vw;
     top:5vh;
     z-index: 2;
+}
+
+#spritesheet1{
+    position:absolute;
+    display:inline-block;
+    width:20vw;
+    aspect-ratio: 1/1;
+    z-index: -1;
+    bottom:9vh;
+    left:16vw;
+
+}
+
+#spritesheet1.rise{
+    background-image: url("../img/img_personnages/character_rising.png");
+    background-size:180vw 100%;
+    animation:rise 1s 1;
+    animation-timing-function: steps(9);   
+    animation-play-state: paused;
+    animation-direction: normal;
+}
+
+#spritesheet1.rise.is-running{
+    animation-play-state: running;
+}
+#spritesheet1.rise.reverse{
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-direction: reverse;
+}
+
+
+#spritesheet1.walk{
+    background-image: url("../img/img_personnages/character_idle.png");
+    background-size: 20vw 100%;
+}
+
+#spritesheet1.walk.reverse{
+    background-image: url("../img/img_personnages/character_walk.png");
+    animation-play-state: running;
+    animation-direction: reverse;
+    aspect-ratio: 1/1;
+    background-size:120vw 100%;
+    animation:walk 1s infinite;
+    animation-timing-function: steps(6);
+    transform: scaleX(-1);
+    
+}
+
+#spritesheet1.walk.is-running{
+    background-image: url("../img/img_personnages/character_walk.png");
+    aspect-ratio: 1/1;
+    background-size:120vw 100%;
+    animation:walk 1s infinite;
+    animation-timing-function: steps(6);
+    animation-play-state: running;
+}
+
+
+@keyframes rise{
+    from {background-position: 0 0;}
+    to{background-position: -180vw 0;}
 }
 
 /*
@@ -283,7 +349,7 @@ Chapitre 2
 }
 
 .chapitre2Text{
-    right:0;
+    right:2vw;
     top:5vh;
 }
 
@@ -352,7 +418,7 @@ Chapitre 3
 }
 
 .chapitre3Text{
-    right:0;
+    right:2vw;
     top:5vh;
 }
 
@@ -414,7 +480,7 @@ Chapitre 4
 }
 
 .chapitre4Text{
-    left:0;
+    left:2vw;
     top:5vh;
 }
 
@@ -441,7 +507,7 @@ Chapitre 5
 }
 
 .chapitre5Text{
-    left:0;
+    left:2vw;
     top:5vh;
 }
 
@@ -502,7 +568,7 @@ Chapitre 6
 }
 
 .chapitre6Text{
-    left:0;
+    left:2vw;
     top:5vh;
 }
 
@@ -513,7 +579,7 @@ Chapitre 7
 */
 
 .chapitre7Text{
-    right:0;
+    right:2vw;
     top:5vh;
 }
 

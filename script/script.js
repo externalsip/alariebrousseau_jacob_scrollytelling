@@ -1,5 +1,45 @@
 gsap.registerPlugin(ScrollTrigger);
 
+let spritesheet1 = document.getElementById("spritesheet1");
+const chapitre1 = document.getElementById("chapitre1");
+
+
+gsap.timeline({scrollTrigger: {
+    pin:true,
+    scrub:true,
+    trigger:chapitre1,
+    end: "600% top",
+    onUpdate: (self) => {
+        if(self.direction == 1){
+                    spritesheet1.classList.add('is-running');
+                    spritesheet1.classList.remove('reverse');
+        }
+        else{
+            spritesheet1.classList.add('reverse');
+            spritesheet1.classList.remove('is-running');
+        }
+        window.clearTimeout(timer1);
+        timer1 = setTimeout(timerCh1, 250);
+        spritesheet1.addEventListener("animationend", () => {
+            spritesheet1.classList.add("walk");
+            spritesheet1.classList.remove("rise");
+        })
+    }
+}})
+.fromTo(chapitre1, {backgroundPositionX: 0}, {backgroundPositionX: "-180vw"})
+.fromTo(document.querySelector(".porte"), {x: 0}, {x: "-180vw"}, '<')
+
+
+let timer1;
+function timerCh1() {
+    spritesheet1.classList.remove('is-running', 'reverse');
+}
+
+/*///////////////////////////////////////////////
+CHAPITRE 2
+//////////////////////////////////////////////// */
+
+
 const circle = document.querySelector(".circle");
 const chapitre2 = document.getElementById("chapitre2");
 const buildingsArr = document.querySelectorAll(".building");
