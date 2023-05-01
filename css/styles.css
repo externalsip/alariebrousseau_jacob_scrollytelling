@@ -199,45 +199,53 @@ Chapitre 1
     z-index: 2;
 }
 
-#spritesheet1{
+#spritesheet1-1{
     position:absolute;
     display:inline-block;
     width:20vw;
     aspect-ratio: 1/1;
     z-index: -1;
-    bottom:9vh;
+    bottom:10vh;
     left:16vw;
 
 }
 
-#spritesheet1.rise{
+#spritesheet1-2{
+    position:absolute;
+    display:inline-block;
+    width:20vw;
+    aspect-ratio: 1/1;
+    z-index: -1;
+    bottom:10vh;
+    left:16vw;
+}
+
+#spritesheet1-2.rise{
     background-image: url("../img/img_personnages/character_rising.png");
     background-size:180vw 100%;
-    animation:rise 1s 1;
+    animation:rise 1s infinite;
     animation-timing-function: steps(9);   
     animation-play-state: paused;
     animation-direction: normal;
 }
 
-#spritesheet1.rise.is-running{
-    animation-play-state: running;
+#spritesheet1-2.rise.is-running{
+    animation-play-state: initial;
 }
-#spritesheet1.rise.reverse{
-    animation-iteration-count: 1;
+#spritesheet1-2.rise.reverse{
     animation-play-state: running;
     animation-direction: reverse;
 }
 
 
-#spritesheet1.walk{
+#spritesheet1-1.walk{
     background-image: url("../img/img_personnages/character_idle.png");
     background-size: 20vw 100%;
 }
 
-#spritesheet1.walk.reverse{
+#spritesheet1-1.walk.reverse{
     background-image: url("../img/img_personnages/character_walk.png");
     animation-play-state: running;
-    animation-direction: reverse;
     aspect-ratio: 1/1;
     background-size:120vw 100%;
     animation:walk 1s infinite;
@@ -246,7 +254,7 @@ Chapitre 1
     
 }
 
-#spritesheet1.walk.is-running{
+#spritesheet1-1.walk.is-running{
     background-image: url("../img/img_personnages/character_walk.png");
     aspect-ratio: 1/1;
     background-size:120vw 100%;

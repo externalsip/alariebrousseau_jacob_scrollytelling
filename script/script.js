@@ -1,38 +1,46 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let spritesheet1 = document.getElementById("spritesheet1");
+
+
+let spritesheetCh1 = document.querySelectorAll(".spritesheet1");
 const chapitre1 = document.getElementById("chapitre1");
-
-
 gsap.timeline({scrollTrigger: {
     pin:true,
     scrub:true,
     trigger:chapitre1,
+    markers:true,
     end: "600% top",
     onUpdate: (self) => {
         if(self.direction == 1){
-                    spritesheet1.classList.add('is-running');
-                    spritesheet1.classList.remove('reverse');
+                    spritesheetCh1.forEach(element => {
+                        element.classList.add("is-running");
+                        element.classList.remove("reverse");
+                    })
         }
         else{
-            spritesheet1.classList.add('reverse');
-            spritesheet1.classList.remove('is-running');
+            spritesheetCh1.forEach(element => {
+                element.classList.remove("is-running");
+                element.classList.add("reverse");
+            })
         }
         window.clearTimeout(timer1);
         timer1 = setTimeout(timerCh1, 250);
-        spritesheet1.addEventListener("animationend", () => {
-            spritesheet1.classList.add("walk");
-            spritesheet1.classList.remove("rise");
-        })
-    }
+    },
+    toggleActions: 'play none reset none',
 }})
-.fromTo("spritesheet", {backgroundPositionX: 0}, {backgroundPositionX: "-180vw"})
+.to(".rise", {opacity: 1, duration: 0})
+.to(".walk", {opacity: 0, duration: 0})
+.to(".rise", {opacity: 0, duration: 0}, "+=0.01")
+.to(".walk", {opacity: 1, duration: 0}, "<")
+.fromTo(chapitre1, {backgroundPositionX: 0}, {backgroundPositionX: "-180vw"}, '<')
 .fromTo(document.querySelector(".porte"), {x: 0}, {x: "-180vw"}, '<')
 
 
 let timer1;
 function timerCh1() {
-    spritesheet1.classList.remove('is-running', 'reverse');
+    spritesheetCh1.forEach(element => {
+        element.classList.remove("reverse", "is-running");
+    })
 }
 
 /*///////////////////////////////////////////////
