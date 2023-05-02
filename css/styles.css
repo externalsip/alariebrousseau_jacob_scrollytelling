@@ -208,7 +208,7 @@ Chapitre 1
     width:20vw;
     aspect-ratio: 1/1;
     z-index: -1;
-    bottom:10vh;
+    bottom:5vmax;
     left:16vw;
 
 }
@@ -219,17 +219,13 @@ Chapitre 1
     width:20vw;
     aspect-ratio: 1/1;
     z-index: -1;
-    bottom:10vh;
+    bottom:5vmax;
     left:16vw;
 }
 
 #spritesheet1-2.rise{
     background-image: url("../img/img_personnages/character_rising.png");
     background-size:180vw 100%;
-    animation:riseM 1s infinite;
-    animation-timing-function: steps(9);   
-    animation-play-state: paused;
-    animation-direction: normal;
 }
 
 #spritesheet1-2.rise.is-running{
@@ -251,7 +247,7 @@ Chapitre 1
     animation-play-state: running;
     aspect-ratio: 1/1;
     background-size:120vw 100%;
-    animation:walk1 1s infinite;
+    animation:walkM 1s infinite;
     animation-timing-function: steps(6);
     transform: scaleX(-1);
     
@@ -265,9 +261,6 @@ Chapitre 1
     animation-timing-function: steps(6);
     animation-play-state: running;
 }
-
-
-
 
 /*
 ///////////////////////////////////////////////////////////
@@ -810,13 +803,13 @@ Chapitre 5
     opacity:0;
 }
 
-#spritesheet5-2.fall{
-    background-image: url("../img/img_personnages/character_fall.png");
-    background-size:120vw 100%;
-    animation:fallM 1s infinite;
-    animation-timing-function: steps(6);   
-    animation-direction: normal;
-}
+    #spritesheet5-2.fall{
+        background-image: url("../img/img_personnages/character_fall.png");
+        background-size:120vw 100%;
+        animation:fallM 1s infinite;
+        animation-timing-function: steps(6);   
+        animation-direction: normal;
+    }
 
 #spritesheet5-3{
     position:absolute;
@@ -866,7 +859,7 @@ Chapitre 6
     left:70vw;
 }
 
-.nuage{
+.nuageCh6{
     width:15vw;
     position:absolute;
     aspect-ratio:1/1;
@@ -913,6 +906,25 @@ Chapitre 6
     top:5vh;
 }
 
+
+#spritesheet6-1{
+    position:absolute;
+    display:inline-block;
+    width:20vw;
+    aspect-ratio: 1/1;
+    top:100vh;
+    left:63vw;
+    opacity:1;
+}
+
+#spritesheet6-1.fall{
+    background-image: url("../img/img_personnages/character_fall.png");
+    background-size:120vw 100%;
+    animation:fallM 1s infinite;
+    animation-timing-function: steps(6);   
+    animation-direction: normal;
+}
+
 /*
 ///////////////////////////////////////////////////////
 Chapitre 7
@@ -932,6 +944,79 @@ Chapitre 7
 #nuage9{
     top:10vh;
     left:10vw;
+}
+
+.nuageCh7{
+    width:15vw;
+    position:absolute;
+    aspect-ratio:1/1;
+    image-rendering: pixelated;
+}
+
+#spritesheet7-1{
+    position:absolute;
+    display:inline-block;
+    width:10vw;
+    aspect-ratio: 1/1;
+    top:-50vh;
+    left:1vw;
+    opacity:0;
+}
+
+#spritesheet7-2{
+    position:absolute;
+    display:inline-block;
+    width:10vw;
+    aspect-ratio: 1/1;
+    top:-50vh;
+    left:1vw;
+    opacity:0;
+    background-image: url("../img/img_personnages/character_idle.png");
+    background-size: 10vw 100%;
+}
+
+#spritesheet7-3{
+    position:absolute;
+    display:inline-block;
+    width:10vw;
+    aspect-ratio: 1/1;
+    top:-50vh;
+    left:1vw;
+    opacity:0;
+}
+
+#spritesheet7-1.fall{
+    background-image: url("../img/img_personnages/character_fall.png");
+    background-size:60vw 100%;
+    animation:fallS 1s infinite;
+    animation-timing-function: steps(6);   
+    animation-direction: normal;
+}
+
+#spritesheet7-2.walk.reverse{
+    background-image: url("../img/img_personnages/character_walk.png");
+    animation-play-state: running;
+    aspect-ratio: 1/1;
+    background-size:60vw 100%;
+    animation:walkS 1s infinite;
+    animation-timing-function: steps(6);
+    transform: scaleX(-1);
+    
+}
+
+#spritesheet7-2.walk.is-running{
+    background-image: url("../img/img_personnages/character_walk.png");
+    aspect-ratio: 1/1;
+    background-size:60vw 100%;
+    animation:walkS 1s infinite;
+    animation-timing-function: steps(6);
+    animation-play-state: running;
+}
+
+#spritesheet7-3.collapse{
+    background-image: url("../img/img_personnages/character_collapse.png");
+    aspect-ratio: 1/1;
+    background-size: 140vw 100%;
 }
 
 /*
@@ -962,11 +1047,6 @@ Animations
 @keyframes fallM{
     from {background-position: 0 0;}
     to{background-position: -120vw 0;}
-}
-
-@keyframes collapseReverse{
-    from {background-position: -280vw 0;}
-    to{background-position: 0 0;}
 }
 
 

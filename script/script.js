@@ -29,12 +29,12 @@ gsap.timeline({scrollTrigger: {
         window.clearTimeout(timer);
         timer = setTimeout(timerRemove, 250);
     },
-    toggleActions: 'play none reset none',
 }})
-.to(".rise", {opacity: 1, duration: 0})
-.to(".walk", {opacity: 0, duration: 0})
-.to(".rise", {opacity: 0, duration: 0}, "+=0.01")
-.to(".walk", {opacity: 1, duration: 0}, "<")
+.to("#spritesheet1-2", {opacity: 1, duration: 0})
+.to("#spritesheet1-1", {opacity: 0, duration: 0})
+.to("#spritesheet1-2", {backgroundPositionX: "-160vw", ease: SteppedEase.config(8), duration: 0.5})
+.to("#spritesheet1-2", {opacity: 0, duration: 0})
+.to("#spritesheet1-1", {opacity: 1, duration: 0}, "<")
 .fromTo(chapitre1, {backgroundPositionX: 0}, {backgroundPositionX: "-120vw"}, '<')
 .fromTo(document.querySelector(".porte"), {x: 0}, {x: "-120vw"}, '<')
 
@@ -217,7 +217,6 @@ gsap.to(".triangles_parralax", {y: hauteurChapitre5 * (-1 * .50), scrollTrigger:
 }})
 
 gsap.timeline({scrollTrigger: {
-    markers:true,
     scrub:true,
     pin:true,
     trigger: chapitre5,
@@ -260,9 +259,68 @@ const chapitre6 = document.getElementById("chapitre6");
 
 gsap.fromTo("#soleil", {scale: 0.9}, {scale: 1.1, duration:3, yoyo:true, ease:"sine.inOut", repeat:-1, scrollTrigger: chapitre6})
 
-gsap.fromTo(".nuage", {opacity:0.6}, {opacity: 1, duration:2, yoyo:true, ease:"sine.inOut", repeat:-1, scrollTrigger: chapitre6})
-gsap.fromTo(".nuage", {y:5}, {y:-5, duration:3, yoyo:true, ease:"sine.inOut", repeat:-1, stagger:1, scrollTrigger: chapitre6})
+gsap.fromTo(".nuageCh6", {opacity:0.6}, {opacity: 1, duration:2, yoyo:true, ease:"sine.inOut", repeat:-1, scrollTrigger: chapitre6})
+gsap.fromTo(".nuageCh6", {y:5}, {y:-5, duration:3, yoyo:true, ease:"sine.inOut", repeat:-1, stagger:1, scrollTrigger: chapitre6})
 
+
+
+gsap.timeline({scrollTrigger: {
+    pin:true,
+    scrub:true,
+    trigger:chapitre6,
+    end: "350% top"
+}})
+.to(".spritesheet6div", {y:"-160vh", duration:6})
+.to(".spritesheet6div", {y:"0vh", duration:6})
+
+
+/*///////////////////////////////////////////////
+CHAPITRE 7
+//////////////////////////////////////////////// */
+
+const chapitre7 = document.getElementById("chapitre7");
+
+gsap.timeline({scrollTrigger: {
+    pin:true,
+    scrub:true,
+    trigger: chapitre7,
+    markers: true,
+    end: "500% top",
+    onUpdate: (self) => {
+        if(self.direction == 1){
+            document.querySelector("#spritesheet7-2").classList.add("is-running");
+            document.querySelector("#spritesheet7-2").classList.remove("reverse");
+            document.querySelector("#spritesheet7-3").classList.add("is-running");
+            document.querySelector("#spritesheet7-3").classList.remove("reverse");
+        }
+        else{
+                document.querySelector("#spritesheet7-2").classList.add("reverse");
+                document.querySelector("#spritesheet7-2").classList.remove("is-running");
+                document.querySelector("#spritesheet7-3").classList.add("reverse");
+                document.querySelector("#spritesheet7-3").classList.remove("is-running");
+        }
+        window.clearTimeout(timer);
+        timer = setTimeout(timerRemove, 250);
+}
+
+}})
+.to(".spritesheet7div", {opacity: 0, duration:0})
+.to("#spritesheet7-2", {opacity: 0, duration:0})
+.to(".spritesheet7div", {opacity: 1, duration:1})
+.to("#spritesheet7-1", {opacity: 1, duration:0})
+.to(".spritesheet7div", {y: "125vh", duration: 7})
+.to("#spritesheet7-1", {opacity: 0, duration:0})
+.to("#spritesheet7-2", {opacity: 1, duration:0}, "<")
+.to(".spritesheet7div", {x: "60vw", y: "115vmin", duration: 6})
+.to("#spritesheet7-2", {opacity: 0, duration:0})
+.to("#spritesheet7-3", {opacity: 1, duration:0}, "<")
+.to("#spritesheet7-3", {backgroundPositionX: "-130vw", ease: SteppedEase.config(13), duration: 6})
+
+
+
+/*///////////////////////////////////////////////
+FONCTIONS
+//////////////////////////////////////////////// */
 
 function timerRemove() {
     spritesheetArr.forEach(element => {
