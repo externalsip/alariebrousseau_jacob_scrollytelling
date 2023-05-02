@@ -222,7 +222,7 @@ gsap.timeline({scrollTrigger: {
     pin:true,
     trigger: chapitre5,
     start:"bottom bottom",
-    end: "300% top",
+    end: "500% top",
     onUpdate: (self) => {
         if(self.direction == 1){
             document.querySelector("#spritesheet5-3").classList.add("is-running");
@@ -236,8 +236,21 @@ gsap.timeline({scrollTrigger: {
         timer = setTimeout(timerRemove, 250);
 }
 }})
-.to("#spritesheet5-2", {opacity:1})
-.to(".spritesheet5div2", {y: "90vh", duration:1})
+.to(".spritesheet5div2", {opacity: 1, duration: 1})
+.to("#spritesheet5-3", {opacity: 0, duration: 0}, "<")
+.to("#spritesheet5-2", {opacity: 1, duration: 0}, "<")
+.from(".spritesheet5div2", {y: "-200vh", duration: 4})
+.to("#spritesheet5-2", {opacity: 0, duration: 0})
+.to("#spritesheet5-3", {opacity: 1, duration: 0}, '<')
+.fromTo(".spritesheet5div2", {x: 0, y: 0}, {x: "50vw", y: "-5vh", duration: 3})
+.to(".spritesheet5div2", {y: "50vh"})
+.to(".spritesheet5div2", {x: "-100vw"})
+.to(".spritesheet5div2", {y: "-5vh"})
+.to(".spritesheet5div2", {x: "20vw", duration: 9})
+.to("#spritesheet5-3", {opacity: 0, duration: 0})
+.to("#spritesheet5-2", {opacity: 1, duration: 0}, "<")
+.to(".spritesheet5div2", {y: "-100vh", duration: 2})
+
 
 /*///////////////////////////////////////////////
 CHAPITRE 6
