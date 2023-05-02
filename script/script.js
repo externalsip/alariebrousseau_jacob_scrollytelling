@@ -1,13 +1,18 @@
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(DrawSVGPlugin);
+gsap.registerPlugin(MotionPathPlugin);
 
+let timer;
+let spritesheetArr = document.querySelectorAll(".spritesheet");
 let spritesheetCh1 = document.querySelectorAll(".spritesheet1");
 const chapitre1 = document.getElementById("chapitre1");
+
 
 gsap.timeline({scrollTrigger: {
     pin:true,
     scrub:true,
     trigger:chapitre1,
-    end: "600% top",
+    end: "600% bottom",
     onUpdate: (self) => {
         if(self.direction == 1){
                     spritesheetCh1.forEach(element => {
@@ -21,8 +26,8 @@ gsap.timeline({scrollTrigger: {
                 element.classList.add("reverse");
             })
         }
-        window.clearTimeout(timer1);
-        timer1 = setTimeout(timerCh1, 250);
+        window.clearTimeout(timer);
+        timer = setTimeout(timerRemove, 250);
     },
     toggleActions: 'play none reset none',
 }})
@@ -30,16 +35,10 @@ gsap.timeline({scrollTrigger: {
 .to(".walk", {opacity: 0, duration: 0})
 .to(".rise", {opacity: 0, duration: 0}, "+=0.01")
 .to(".walk", {opacity: 1, duration: 0}, "<")
-.fromTo(chapitre1, {backgroundPositionX: 0}, {backgroundPositionX: "-180vw"}, '<')
-.fromTo(document.querySelector(".porte"), {x: 0}, {x: "-180vw"}, '<')
+.fromTo(chapitre1, {backgroundPositionX: 0}, {backgroundPositionX: "-120vw"}, '<')
+.fromTo(document.querySelector(".porte"), {x: 0}, {x: "-120vw"}, '<')
 
 
-let timer1;
-function timerCh1() {
-    spritesheetCh1.forEach(element => {
-        element.classList.remove("reverse", "is-running");
-    })
-}
 
 /*///////////////////////////////////////////////
 CHAPITRE 2
@@ -49,6 +48,7 @@ CHAPITRE 2
 const circle = document.querySelector(".circle");
 const chapitre2 = document.getElementById("chapitre2");
 const buildingsArr = document.querySelectorAll(".building");
+let spritesheetCh2 = document.querySelectorAll(".spritesheet2")
 
 gsap.fromTo(circle, {y: 5, opacity: 0}, {y: 90, opacity: 1, repeat: -1, duration: 2.5, ease: "sine inOut"})
 
@@ -56,7 +56,23 @@ gsap.timeline({scrollTrigger: {
     pin:true,
     scrub:true,
     trigger:chapitre2,
-    end:"500% top"
+    end:"500% top",
+    onUpdate: (self) => {
+        if(self.direction == 1){
+                    spritesheetCh2.forEach(element => {
+                        element.classList.add("is-running");
+                        element.classList.remove("reverse");
+                    })
+        }
+        else{
+            spritesheetCh2.forEach(element => {
+                element.classList.remove("is-running");
+                element.classList.add("reverse");
+            })
+        }
+        window.clearTimeout(timer);
+        timer = setTimeout(timerRemove, 250);
+    },
 }})
 .fromTo("#building1", {y:"100%", x:"100vw"}, {y:"0", duration: 2, ease: "sine.out"})
 .to("#building1", {x:"-20vw", duration:5, ease:"none"}, "<0.1")
@@ -71,18 +87,172 @@ gsap.timeline({scrollTrigger: {
 .fromTo("#building6", {y:"100%", x:"100vw"}, {y:"0", duration: 2, ease: "sine.out"}, "-=4.7")
 .to("#building6", {x:"-20vw", duration:5, ease:"none"}, "<0.1")
 .fromTo("#building7", {y:"100%", x:"100vw"}, {y:"0", duration: 2, ease: "sine.out"}, "-=5.4")
-.to("#building7", {x:"-20vw", duration:5, ease:"none"}, "<0.1");
+.to("#building7", {x:"-20vw", duration:5, ease:"none"}, "<0.1")
+.fromTo("#building8", {y:"100%", x:"100vw"}, {y:"0", duration: 2, ease: "sine.out"}, "-=5.6")
+.to("#building8", {x:"-20vw", duration:5, ease:"none"}, "<0.1")
+.fromTo("#building9", {y:"100%", x:"100vw"}, {y:"0", duration: 2, ease: "sine.out"}, "-=4.7")
+.to("#building9", {x:"-20vw", duration:5, ease:"none"}, "<0.1")
 
-gsap.timeline({repeat:-1})
-.from("#auto1", {x:"-150vw", duration:4, ease: "sine.inOut"})
-.from("#auto2", {x:"-150vw", duration:4, ease:"sine.inOut"}, "-=3")
-.from("#auto3", {x:"-150vw", duration:4, ease:"sine.inOut"}, "-=3")
+let timer2;
+function timerCh2() {
+    spritesheetCh2.forEach(element => {
+        element.classList.remove("reverse", "is-running");
+    })
+}
 
-gsap.fromTo(".poisson", {rotation:5}, {rotation:-5, yoyo:true, repeat:-1, ease:"sine.inOut", duration:2})
-gsap.from("#poisson1", {x:"-50vw", duration: 60})
-gsap.from("#poisson2", {x:"-50vw", duration: 60})
+/*///////////////////////////////////////////////
+CHAPITRE 3
+//////////////////////////////////////////////// */
 
-gsap.fromTo("#soleil", {scale: 0.9}, {scale: 1.1, duration:3, yoyo:true, ease:"sine.inOut", repeat:-1})
+const chapitre3 = document.getElementById("chapitre3");
+let spritesheetCh3 = document.querySelectorAll(".spritesheet3");
 
-gsap.fromTo(".nuage", {opacity:0.6}, {opacity: 1, duration:2, yoyo:true, ease:"sine.inOut", repeat:-1})
-gsap.fromTo(".nuage", {y:5}, {y:-5, duration:3, yoyo:true, ease:"sine.inOut", repeat:-1, stagger:1})
+gsap.from("#auto1", {x:"-150vw", duration:4, ease: "sine.inOut", repeat: -1, scrollTrigger: chapitre3})
+gsap.from("#auto2", {x:"-150vw", duration:5, ease:"sine.inOut", repeat: -1, scrollTrigger: chapitre3}, "-=3")
+gsap.from("#auto3", {x:"-150vw", duration:2, ease:"sine.inOut", repeat: -1, scrollTrigger: chapitre3}, "-=3")
+
+gsap.timeline({scrollTrigger: {
+    trigger: chapitre3,
+    pin:true,
+    end:"400% top",
+    toggleActions:"play complete reverse reset",
+    onUpdate: (self) => {
+        if(self.direction == 1){
+                    spritesheetCh3.forEach(element => {
+                        element.classList.add("is-running");
+                        element.classList.remove("reverse");
+                    })
+        }
+        else{
+            spritesheetCh3.forEach(element => {
+                element.classList.remove("is-running");
+                element.classList.add("reverse");
+            })
+        }
+        window.clearTimeout(timer);
+        timer = setTimeout(timerRemove, 250);
+    },
+}})
+.from("#arbre1", {x:"150vw", duration:5, ease:"none"})
+.from("#arbre2", {x:"150vw", duration:5, ease:"none"}, "-=4.5")
+.from("#arbre3", {x:"150vw", duration:5, ease:"none"}, "-=4.3")
+.from("#arbre4", {x:"150vw", duration:5, ease:"none"}, "-=4.7")
+.from("#arbre5", {x:"150vw", duration:5, ease:"none"}, "-=4.9")
+.from("#arbre6", {x:"150vw", duration:5, ease:"none"}, "-=4")
+
+/*///////////////////////////////////////////////
+CHAPITRE 4
+//////////////////////////////////////////////// */
+
+const chapitre4 = document.getElementById("chapitre4")
+
+
+gsap.fromTo(".ventSVG",{drawSVG: "0 0"}, {
+    drawSVG:"0% 100%",
+    duration: 2,
+    repeat: -1,
+    ease: "sine.inOut",
+    opacity:0,
+    stagger: 0.5,
+    scrollTrigger: chapitre4,
+});
+
+gsap.timeline({scrollTrigger: {
+    pin:true,
+    scrub:true,
+    trigger:chapitre4,
+    end:"500% top",
+    onUpdate: (self) => {
+        if(self.direction == 1){
+            document.querySelector("#spritesheet4-1").classList.add("is-running");
+            document.querySelector("#spritesheet4-1").classList.remove("reverse");
+        }
+        else{
+                document.querySelector("#spritesheet4-1").classList.add("reverse");
+                document.querySelector("#spritesheet4-1").classList.remove("is-running");
+        }
+        window.clearTimeout(timer);
+        timer = setTimeout(timerRemove, 250);
+}}})
+.fromTo(".spritesheet4div", {x: 0}, {x: "34vw"})
+.to(".spritesheet4div", {x: "60vw", y:"-5vw"})
+.to("#spritesheet4-1", {opacity: 0, duration: 0})
+.to("#spritesheet4-2", {opacity: 1, duration: 0}, "<")
+.to(".spritesheet4div", {y:"10vw"})
+
+
+/*///////////////////////////////////////////////
+CHAPITRE 5
+//////////////////////////////////////////////// */
+
+const chapitre5 = document.getElementById("chapitre5")
+
+let hauteurChapitre5 = chapitre5.scrollHeight;
+
+gsap.to("#poisson1", {motionPath: {
+    path:"#motionPath1",
+    align:"#motionPath1",
+    autoRotate: true,
+},
+duration:60,
+scrollTrigger: chapitre5})
+gsap.to("#poisson2", {motionPath: {
+    path:"#motionPath2",
+    align:"#motionPath2",
+    autoRotate: true,
+},
+duration:60,
+scrollTrigger: chapitre5})
+
+
+gsap.to('.spritesheet5div', {y: hauteurChapitre5 * (-1 * .20), scrollTrigger: {
+    trigger:chapitre5,
+    scrub:true,
+    start: "25% bottom"
+}})
+gsap.to(".triangles_parralax", {y: hauteurChapitre5 * (-1 * .50), scrollTrigger: {
+    trigger: chapitre5,
+    scrub:true,
+    start: "25% bottom",
+}})
+
+gsap.timeline({scrollTrigger: {
+    markers:true,
+    scrub:true,
+    pin:true,
+    trigger: chapitre5,
+    start:"bottom bottom",
+    end: "300% top",
+    onUpdate: (self) => {
+        if(self.direction == 1){
+            document.querySelector("#spritesheet5-3").classList.add("is-running");
+            document.querySelector("#spritesheet5-3").classList.remove("reverse");
+        }
+        else{
+                document.querySelector("#spritesheet5-3").classList.add("reverse");
+                document.querySelector("#spritesheet5-3").classList.remove("is-running");
+        }
+        window.clearTimeout(timer);
+        timer = setTimeout(timerRemove, 250);
+}
+}})
+.to("#spritesheet5-2", {opacity:1})
+.to(".spritesheet5div2", {y: "90vh", duration:1})
+
+/*///////////////////////////////////////////////
+CHAPITRE 6
+//////////////////////////////////////////////// */
+
+const chapitre6 = document.getElementById("chapitre6");
+
+gsap.fromTo("#soleil", {scale: 0.9}, {scale: 1.1, duration:3, yoyo:true, ease:"sine.inOut", repeat:-1, scrollTrigger: chapitre6})
+
+gsap.fromTo(".nuage", {opacity:0.6}, {opacity: 1, duration:2, yoyo:true, ease:"sine.inOut", repeat:-1, scrollTrigger: chapitre6})
+gsap.fromTo(".nuage", {y:5}, {y:-5, duration:3, yoyo:true, ease:"sine.inOut", repeat:-1, stagger:1, scrollTrigger: chapitre6})
+
+
+function timerRemove() {
+    spritesheetArr.forEach(element => {
+        element.classList.remove("reverse", "is-running");
+    })
+}

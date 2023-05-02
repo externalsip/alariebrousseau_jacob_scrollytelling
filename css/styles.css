@@ -102,10 +102,13 @@ section{
     background-image: url("../img/img_arriere_plan/chapitre2-4/background-chapitre2-4.png");
 }
 #chapitre5{
-    background-image: url("../img/img_arriere_plan/chapitre5/background-chapitre5.png");
+    background-image: url("../img/img_elements_visuels/chapitre5/parralaxe1.png");
+    height:250vh;
+    aspect-ratio: 1920/2612;
 }
 #chapitre6{
     background-image: url("../img/img_arriere_plan/chapitre6/background-chapitre6.png");
+
 }
 #chapitre7{
     background-image: url("../img/img_arriere_plan/chapitre7/background-chapitre7.png");
@@ -248,7 +251,7 @@ Chapitre 1
     animation-play-state: running;
     aspect-ratio: 1/1;
     background-size:120vw 100%;
-    animation:walk 1s infinite;
+    animation:walk1 1s infinite;
     animation-timing-function: steps(6);
     transform: scaleX(-1);
     
@@ -258,7 +261,7 @@ Chapitre 1
     background-image: url("../img/img_personnages/character_walk.png");
     aspect-ratio: 1/1;
     background-size:120vw 100%;
-    animation:walk 1s infinite;
+    animation:walk1 1s infinite;
     animation-timing-function: steps(6);
     animation-play-state: running;
 }
@@ -267,6 +270,10 @@ Chapitre 1
 @keyframes rise{
     from {background-position: 0 0;}
     to{background-position: -180vw 0;}
+}
+@keyframes walk1{
+    from {background-position: 0 0;}
+    to{background-position: -120vw 0;}
 }
 
 /*
@@ -361,6 +368,46 @@ Chapitre 2
     top:5vh;
 }
 
+#spritesheet2-1{
+    position:absolute;
+    display:inline-block;
+    width:10vw;
+    aspect-ratio: 1/1;
+    z-index: 5;
+    bottom:1vh;
+    left:5vw;
+
+}
+
+#spritesheet2-1.walk{
+    background-image: url("../img/img_personnages/character_idle.png");
+    background-size: 10vw 100%;
+}
+
+#spritesheet2-1.walk.reverse{
+    background-image: url("../img/img_personnages/character_walk.png");
+    aspect-ratio: 1/1;   
+    background-size:60vw 100%;
+    animation:walk2 1s infinite;     
+    animation-timing-function: steps(6);   
+    animation-play-state: running;
+    transform: scaleX(-1);
+
+}
+#spritesheet2-1.walk.is-running{
+    background-image: url("../img/img_personnages/character_walk.png");
+    aspect-ratio: 1/1;
+    background-size:60vw 100%;
+    animation:walk2 1s infinite;
+    animation-timing-function: steps(6);
+    animation-play-state: running;
+}
+
+@keyframes walk2{
+    from {background-position: 0 0;}
+    to{background-position: -60vw 0;}
+}
+
 
 /*
 ///////////////////////////////////////////////
@@ -381,8 +428,32 @@ Chapitre 3
     z-index:2;
     width:9vw;
     bottom:1vw;
-    left:-10vw;
 }
+
+#arbre1{
+    left:30vw;
+}
+
+#arbre2{
+    left:25vw;
+}
+
+#arbre3{
+    left:60vw;
+}
+
+#arbre4{
+    left:10vw;
+}
+
+#arbre5{
+    left:5vw;
+}
+
+#arbre6{
+    left:1vw;
+}
+
 .arbre.arbreBackRow{
     z-index: 1;
 }
@@ -430,6 +501,48 @@ Chapitre 3
     top:5vh;
 }
 
+#spritesheet3-1{
+    position:absolute;
+    display:inline-block;
+    width:10vw;
+    aspect-ratio: 1/1;
+    z-index: 5;
+    bottom:1vh;
+    left:5vw;
+
+}
+
+
+#spritesheet3-1.walk{
+    background-image: url("../img/img_personnages/character_idle.png");
+    background-size: 10vw 100%;
+}
+
+#spritesheet3-1.walk.reverse{
+    background-image: url("../img/img_personnages/character_walk.png");
+    aspect-ratio: 1/1;   
+    background-size:60vw 100%;
+    animation:walk3 1s infinite;     
+    animation-timing-function: steps(6);   
+    animation-play-state: running;
+    transform: scaleX(-1);
+
+}
+#spritesheet3-1.walk.is-running{
+    background-image: url("../img/img_personnages/character_walk.png");
+    aspect-ratio: 1/1;
+    background-size:60vw 100%;
+    animation:walk3 1s infinite;
+    animation-timing-function: steps(6);
+    animation-play-state: running;
+}
+
+@keyframes walk3{
+    from {background-position: 0 0;}
+    to{background-position: -60vw 0;}
+}
+
+
 /*
 /////////////////////////////////////////////////////
 Chapitre 4
@@ -463,13 +576,13 @@ Chapitre 4
 #pont_avant{
     position: absolute;
     width:100%;
-    z-index:3;
+    z-index:5;
     bottom:0;
 }
 #pont_arriere{
     position:absolute;
     width: 100%;
-    z-index:5;
+    z-index:3;
     bottom:1.1vw;
 }
 #pont_shading{
@@ -483,13 +596,98 @@ Chapitre 4
     width:30vw;
     aspect-ratio:1095.33/252.51;
     position:absolute;
+}
+
+.vent1{
     top:40vh;
     left:40vw;
+}
+
+.vent2{
+    top:36vh;
+    left:48vw;
 }
 
 .chapitre4Text{
     left:2vw;
     top:5vh;
+}
+
+.spritesheet4div{
+    position:absolute;
+    display:inline-block;
+    width:10vw;
+    aspect-ratio: 1/1;
+    z-index: 3;
+    bottom:1vh;
+    left:5vw;
+
+}
+
+#spritesheet4-1{
+    position:absolute;
+    display:inline-block;
+    width:10vw;
+    aspect-ratio: 1/1;
+    z-index: 3;
+    bottom:1vh;
+    left:5vw;
+
+}
+
+#spritesheet4-2{
+    position:absolute;
+    display:inline-block;
+    width:10vw;
+    aspect-ratio: 1/1;
+    z-index: 3;
+    bottom:1vh;
+    left:5vw;
+
+}
+
+
+#spritesheet4-1.walk{
+    background-image: url("../img/img_personnages/character_idle.png");
+    background-size: 10vw 100%;
+}
+
+#spritesheet4-1.walk.reverse{
+    background-image: url("../img/img_personnages/character_walk.png");
+    aspect-ratio: 1/1;   
+    background-size:60vw 100%;
+    animation:walk4 1s infinite;     
+    animation-timing-function: steps(6);   
+    animation-play-state: running;
+    transform: scaleX(-1);
+
+}
+#spritesheet4-1.walk.is-running{
+    background-image: url("../img/img_personnages/character_walk.png");
+    aspect-ratio: 1/1;
+    background-size:60vw 100%;
+    animation:walk4 1s infinite;
+    animation-timing-function: steps(6);
+    animation-play-state: running;
+}
+
+#spritesheet4-2.fall{
+    background-image: url("../img/img_personnages/character_fall.png");
+    background-size:60vw 100%;
+    animation:fall 1s infinite;
+    animation-timing-function: steps(6);   
+    animation-direction: normal;
+    opacity:0;
+}
+
+@keyframes walk4{
+    from {background-position: 0 0;}
+    to{background-position: -60vw 0;}
+}
+
+@keyframes fall{
+    from {background-position: 0 0;}
+    to{background-position: -60vw 0;}
 }
 
 /*
@@ -498,10 +696,64 @@ Chapitre 5
 /////////////////////////////////////////////////
 */
 
+.chapitre5Bottom{
+    background-image: url("../img/img_arriere_plan/chapitre5/background-chapitre5.png");
+    display:inline-block;
+    background-size: cover;
+    position:absolute;
+    width:100vw;
+    aspect-ratio: 16/9;
+    bottom:0;
+    z-index:1;
+}
+
+.triangle{
+    position:absolute;
+    width:8vw;
+    aspect-ratio: 190/172;
+    z-index:2;
+}
+
+#triangle1{
+    top:70vh;
+    left:80vw;
+    transform: rotate(50deg);
+}
+
+#triangle2{
+    top:120vh;
+    left:50vw;
+    transform: rotate(-30deg);
+}
+
+#triangle3{
+    top:90vh;
+    left:30vw;
+    transform: rotate(70deg);
+}
+#triangle4{
+    top:60vh;
+    left:17vw;
+
+}
+
+#triangle5{
+    top:150vh;
+    left:10vw;
+    transform:rotate(40deg);
+}
+
+#triangle6{
+    top:160vh;
+    left:60vw;
+    transform: rotate(80deg);
+}
+
 .poisson{
     position:absolute;
     width:7vw;
     aspect-ratio:235.72/120.4;
+    z-index: 3;
 }
 
 #poisson1{
@@ -518,6 +770,98 @@ Chapitre 5
     left:2vw;
     top:5vh;
 }
+
+
+.path{
+    width:80vw;
+    position:absolute;
+}
+
+.path1{
+    left:10vw;
+    top:50vh;
+}
+
+.path2{
+    left:5vw;
+    top:120vh;
+}
+
+.motionPath{
+    stroke-opacity: 0;
+}
+
+.spritesheet5div{
+    z-index: 4;
+}
+
+#spritesheet5-1{
+    position:absolute;
+    display:inline-block;
+    width:20vw;
+    aspect-ratio: 1/1;
+    top:100vh;
+    left:63vw;
+}
+
+
+
+#spritesheet5-1.fall{
+    background-image: url("../img/img_personnages/character_fall.png");
+    background-size:120vw 100%;
+    animation:fall5 1s infinite;
+    animation-timing-function: steps(6);   
+    animation-direction: normal;
+}
+
+@keyframes fall5{
+    from {background-position: 0 0;}
+    to{background-position: -120vw 0;}
+}
+
+#spritesheet5-2{
+    position:absolute;
+    display:inline-block;
+    width:20vw;
+    aspect-ratio: 1/1;
+    top:-25vh;
+    left:63vw;
+    opacity:0;
+}
+
+#spritesheet5-3{
+    background-image: url("../img/img_personnages/character_collapse.png");
+    background-size:280vw 100%;
+    background-position: -260vw 100%;
+    position:absolute;
+    display:inline-block;
+    width:20vw;
+    aspect-ratio: 1/1;
+    top:-25vh;
+    left:63vw;
+    opacity:1;
+    animation:collapse 2s infinite;
+    animation-timing-function: steps(14);    
+    animation-play-state: paused;
+}
+
+#spritesheet5-2.fall{
+    background-image: url("../img/img_personnages/character_fall.png");
+    background-size:120vw 100%;
+    animation:fall5 1s infinite;
+    animation-timing-function: steps(6);   
+    animation-direction: normal;
+}
+
+#spritesheet5-3.reverse_collapse.is-running{
+    animation-play-state: running;
+}
+
+@keyframes collapse{
+    from {background-position: -280vw 0;}
+    to{background-position: 0 0;}
+}
+
 
 /*
 /////////////////////////////////////////////////
@@ -644,12 +988,6 @@ Test
     animation-play-state: running;
 }
 
-@keyframes walk{
-    from {background-position: 0 0;}
-    to{background-position: -120vw 0;}
-}
 
-@keyframes fall{
-    from {background-position: 0 0;}
-    to{background-position: -120vw 0;}
-}
+
+
