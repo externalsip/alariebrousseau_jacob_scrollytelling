@@ -284,7 +284,6 @@ gsap.timeline({scrollTrigger: {
     pin:true,
     scrub:true,
     trigger: chapitre7,
-    markers: true,
     end: "500% top",
     onUpdate: (self) => {
         if(self.direction == 1){
