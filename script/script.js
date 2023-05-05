@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(DrawSVGPlugin);
-gsap.registerPlugin(MotionPathPlugin);
+/*gsap.registerPlugin(DrawSVGPlugin);
+gsap.registerPlugin(MotionPathPlugin);*/
 
 let timer;
 let spritesheetArr = document.querySelectorAll(".spritesheet");
@@ -147,7 +147,7 @@ CHAPITRE 4
 const chapitre4 = document.getElementById("chapitre4")
 
 
-gsap.fromTo(".ventSVG",{drawSVG: "0 0"}, {
+/*gsap.fromTo(".ventSVG",{drawSVG: "0 0"}, {
     drawSVG:"0% 100%",
     duration: 2,
     repeat: -1,
@@ -155,7 +155,7 @@ gsap.fromTo(".ventSVG",{drawSVG: "0 0"}, {
     opacity:0,
     stagger: 0.5,
     scrollTrigger: chapitre4,
-});
+});*/
 
 gsap.timeline({scrollTrigger: {
     pin:true,
@@ -189,20 +189,26 @@ const chapitre5 = document.getElementById("chapitre5")
 
 let hauteurChapitre5 = chapitre5.scrollHeight;
 
-gsap.to("#poisson1", {motionPath: {
+/*gsap.to("#poisson1", {motionPath: {
     path:"#motionPath1",
     align:"#motionPath1",
     autoRotate: true,
 },
 duration:60,
-scrollTrigger: chapitre5})
+scrollTrigger: {
+    trigger: chapitre5,
+    toggleActions:"play complete restart restart",
+}})
 gsap.to("#poisson2", {motionPath: {
     path:"#motionPath2",
     align:"#motionPath2",
     autoRotate: true,
 },
 duration:60,
-scrollTrigger: chapitre5})
+scrollTrigger: {
+    trigger: chapitre5,
+    toggleActions:"play complete restart restart",
+}})*/
 
 
 gsap.to('.spritesheet5div', {y: hauteurChapitre5 * (-1 * .20), scrollTrigger: {
@@ -211,6 +217,12 @@ gsap.to('.spritesheet5div', {y: hauteurChapitre5 * (-1 * .20), scrollTrigger: {
     start: "25% bottom"
 }})
 gsap.to(".triangles_parralax", {y: hauteurChapitre5 * (-1 * .50), scrollTrigger: {
+    trigger: chapitre5,
+    scrub:true,
+    start: "25% bottom",
+}})
+
+gsap.fromTo("#chapitre5", {backgroundPositionY: 0}, {backgroundPositionY: "100%", scrollTrigger: {
     trigger: chapitre5,
     scrub:true,
     start: "25% bottom",
@@ -313,7 +325,10 @@ gsap.timeline({scrollTrigger: {
 .to(".spritesheet7div", {x: "60vw", y: "115vmin", duration: 6})
 .to("#spritesheet7-2", {opacity: 0, duration:0})
 .to("#spritesheet7-3", {opacity: 1, duration:0}, "<")
-.to("#spritesheet7-3", {backgroundPositionX: "-130vw", ease: SteppedEase.config(13), duration: 6})
+.to("#spritesheet7-3", {backgroundPositionX: "-130vw", ease: SteppedEase.config(13), duration: 6});
+
+gsap.fromTo(".nuageCh7", {opacity:0.6}, {opacity: 1, duration:2, yoyo:true, ease:"sine.inOut", repeat:-1, scrollTrigger: chapitre7})
+gsap.fromTo(".nuageCh7", {y:5}, {y:-5, duration:3, yoyo:true, ease:"sine.inOut", repeat:-1, stagger:1, scrollTrigger: chapitre7})
 
 
 

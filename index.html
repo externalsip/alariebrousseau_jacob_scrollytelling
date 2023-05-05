@@ -25,6 +25,24 @@
 
     <main>
         <section id="chapitre1">
+            <ul class="technique-gsap"> 
+                <li>
+                    anim sur backgroundPosition X et Y
+                </li>
+                <li>
+                    anim spritesheet lorsque le div contenant la spritesheet possède la classe is-running, l'image est inversée si le div possède la class reverse
+                </li>
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger= #chapitre1</li> 
+                        <li>scrub= true</li>
+                        <li>pin= true</li>
+                        <li>
+                            Timeline sur le défilement de la première spritesheet, le changement vers la deuxième (opacity: 0 sur première et opacity: 1 sur deuxième), et le déplacement du background.
+                        </li>
+                    </ul> 
+                </li> 
+            </ul>
             <div class="textbox chapitre1Text">
                 <span class="text">Je viens de me réveiller, mais je sense qu'il y a quelque chose d'étrange avec le monde, je devrais m'assurer que tout est normal.</span>
             </div>
@@ -47,6 +65,20 @@
         </section>
 
         <section id="chapitre2">
+            <ul class="technique-gsap"> 
+                <li>anim sur x et y</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger= #chapitre2</li> 
+                        <li>scrub= true</li> 
+                        <li>pin= true</li>
+                        <li>Timeline faisant monter les bâtiments en même temps de les faire défiler sur l'écran</li>
+                    </ul> 
+                </li>
+                <li>
+                    anim spritesheet lorsque le div contenant la spritesheet possède la classe is-running, l'image est inversée si le div possède la class reverse
+                </li>
+            </ul>
             <div class="textbox chapitre2Text">            
                 <span class="text">Cette ville ne m'est pas familière, je ne sais pas comment je suis atteri ici mais je ne reconnaît rien de ce qui m'entour</span>
             </div>
@@ -60,17 +92,7 @@
             <img class="building buildingBackRow buildingBackRowVar3" id="building7" src="img/img_elements_visuels/chapitre2/batimentBackground3.png" alt="buidling7">
             <img class="building buildingVar1" id="building8" src="img/img_elements_visuels/chapitre2/batiment1.png" alt="buidling8">
             <img class="building buildingVar2" id="building9" src="img/img_elements_visuels/chapitre2/batiment2.png" alt="buidling9">
-            <div class="building_construction">
-                <img class="couche9 couche" src="img/img_elements_visuels/chapitre2/building_compose_couches/building-composition9.png" alt=couche9>
-                <img class="couche8 couche" src="img/img_elements_visuels/chapitre2/building_compose_couches/building-composition8.png" alt=couche8>
-                <img class="couche7 couche" src="img/img_elements_visuels/chapitre2/building_compose_couches/building-composition7.png" alt=couche7>
-                <img class="couche6 couche" src="img/img_elements_visuels/chapitre2/building_compose_couches/building-composition6.png" alt=couche6>
-                <img class="couche5 couche" src="img/img_elements_visuels/chapitre2/building_compose_couches/building-composition5.png" alt=couche5>
-                <img class="couche4 couche" src="img/img_elements_visuels/chapitre2/building_compose_couches/building-composition4.png" alt=couche4>
-                <img class="couche3 couche" src="img/img_elements_visuels/chapitre2/building_compose_couches/building-composition3.png" alt=couche3>
-                <img class="couche2 couche" src="img/img_elements_visuels/chapitre2/building_compose_couches/building-composition2.png" alt=couche2>
-                <img class="couche1 couche" src="img/img_elements_visuels/chapitre2/building_compose_couches/building-composition1.png" alt=couche1>
-            </div>
+
 
             <div>
                 <div class="spritesheet2 walk spritesheet" id="spritesheet2-1"></div>
@@ -79,6 +101,18 @@
         </section>
 
         <section id="chapitre3">
+            <ul class="technique-gsap"> 
+                <li>anim des autos sur l'axe des x qui n'est pas liée au scroll du chapitre</li> 
+                <li>anim des arbres sur l'axe des x, ils avancent sans être lié au scroll, mais si on termine le scroll elle se termine automatiquement, elle va à l'envers si on y retourne de plus bas dans la page, et retourne au début si on y revient de plus haut dans la page </li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger= #chapitre3</li> 
+                        <li>scrub= true</li>
+                        <li>pin= true</li>
+                        <li>toggleActions: play complete reverse reset</li>
+                    </ul> 
+                </li> 
+            </ul> 
             <div class="textbox chapitre3Text">
                 <span class="text">Je ne sais pas comment je suis arrivé sur cette autoroute, mais heureusement, le trotoire est encore présent, même si c'est très étrange.</span>
             </div>
@@ -193,8 +227,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <script src="gsap-plugiciels-payants-nepaspubliersurgit/DrawSVGPlugin3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
+  <!--  <script src="gsap-plugiciels-payants-nepaspubliersurgit/DrawSVGPlugin3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>-->
     <script src="script/script.js"></script>
 </body>
 </html>
