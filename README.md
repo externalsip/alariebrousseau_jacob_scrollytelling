@@ -20,3 +20,6 @@ Projet scolaire dans le cadre du cours d'optimisation web, technique d'intégrat
 - Javascript
 - [GSAP](https://greensock.com)
 - [Scrolltrigger](https://greensock.com/scrolltrigger/)
+- [drawSVG](https://greensock.com/drawsvg/)
+- [motionPath](https://greensock.com/motionpath/)
+- [morphSVG](https://greensock.com/morphsvg/)
