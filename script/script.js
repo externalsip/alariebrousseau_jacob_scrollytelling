@@ -147,7 +147,7 @@ CHAPITRE 4
 const chapitre4 = document.getElementById("chapitre4")
 
 
-/*gsap.fromTo(".ventSVG",{drawSVG: "0 0"}, {
+gsap.fromTo(".ventSVG",{drawSVG: "0 0"}, {
     drawSVG:"0% 100%",
     duration: 2,
     repeat: -1,
@@ -155,7 +155,7 @@ const chapitre4 = document.getElementById("chapitre4")
     opacity:0,
     stagger: 0.5,
     scrollTrigger: chapitre4,
-});*/
+});
 
 gsap.timeline({scrollTrigger: {
     pin:true,
@@ -175,10 +175,10 @@ gsap.timeline({scrollTrigger: {
         timer = setTimeout(timerRemove, 250);
 }}})
 .fromTo(".spritesheet4div", {x: 0}, {x: "34vw"})
-.to(".spritesheet4div", {x: "60vw", y:"-5vw"})
+.to(".spritesheet4div", {x: "60vw", y:"-5vh"})
 .to("#spritesheet4-1", {opacity: 0, duration: 0})
 .to("#spritesheet4-2", {opacity: 1, duration: 0}, "<")
-.to(".spritesheet4div", {y:"10vw"})
+.to(".spritesheet4div", {y:"25vh"})
 
 
 /*///////////////////////////////////////////////
@@ -189,7 +189,7 @@ const chapitre5 = document.getElementById("chapitre5")
 
 let hauteurChapitre5 = chapitre5.scrollHeight;
 
-/*gsap.to("#poisson1", {motionPath: {
+gsap.to("#poisson1", {motionPath: {
     path:"#motionPath1",
     align:"#motionPath1",
     autoRotate: true,
@@ -208,7 +208,7 @@ duration:60,
 scrollTrigger: {
     trigger: chapitre5,
     toggleActions:"play complete restart restart",
-}})*/
+}})
 
 
 gsap.to('.spritesheet5div', {y: hauteurChapitre5 * (-1 * .20), scrollTrigger: {
@@ -248,8 +248,11 @@ gsap.timeline({scrollTrigger: {
 }
 }})
 .to(".spritesheet5div2", {opacity: 1, duration: 1})
+
 .to("#spritesheet5-3", {opacity: 0, duration: 0}, "<")
 .to("#spritesheet5-2", {opacity: 1, duration: 0}, "<")
+.to("#morphingSVG", {y: "-70vh", duration: 8})
+.to("#bubble", {morphSVG: "#cat", duration: 5}, '<')
 .from(".spritesheet5div2", {y: "-200vh", duration: 4})
 .to("#spritesheet5-2", {opacity: 0, duration: 0})
 .to("#spritesheet5-3", {opacity: 1, duration: 0}, '<')
@@ -260,7 +263,9 @@ gsap.timeline({scrollTrigger: {
 .to(".spritesheet5div2", {x: "20vw", duration: 9})
 .to("#spritesheet5-3", {opacity: 0, duration: 0})
 .to("#spritesheet5-2", {opacity: 1, duration: 0}, "<")
-.to(".spritesheet5div2", {y: "-100vh", duration: 2})
+.to(".spritesheet5div2", {y: "-100vh", duration: 2});
+
+
 
 
 /*///////////////////////////////////////////////
@@ -270,11 +275,8 @@ CHAPITRE 6
 const chapitre6 = document.getElementById("chapitre6");
 
 gsap.fromTo("#soleil", {scale: 0.9}, {scale: 1.1, duration:3, yoyo:true, ease:"sine.inOut", repeat:-1, scrollTrigger: chapitre6})
-
 gsap.fromTo(".nuageCh6", {opacity:0.6}, {opacity: 1, duration:2, yoyo:true, ease:"sine.inOut", repeat:-1, scrollTrigger: chapitre6})
 gsap.fromTo(".nuageCh6", {y:5}, {y:-5, duration:3, yoyo:true, ease:"sine.inOut", repeat:-1, stagger:1, scrollTrigger: chapitre6})
-
-
 
 gsap.timeline({scrollTrigger: {
     pin:true,

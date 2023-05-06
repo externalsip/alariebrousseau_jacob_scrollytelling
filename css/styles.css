@@ -127,7 +127,7 @@ section{
     background-color:var(--black);
     position:absolute;
     border-radius: 10px;
-    padding:5px;
+    padding:25px;
     border:1px solid var(--white);
 }
 
@@ -139,7 +139,7 @@ Chapitre 1
 */
 
 /*
-
+///////////////////////////////////////////////////////////////////////////////////////////
 #lit{
     width:20vw;
     aspect-ratio: 573/95;
@@ -167,6 +167,8 @@ Chapitre 1
     top:32vh;
     left:10vw;
 }
+ASSETS REMPLACÉS
+///////////////////////////////////////////////////////////////////////////////////////////
 
 */
 
@@ -842,6 +844,16 @@ Chapitre 5
     animation:walkM 1s infinite;
     animation-timing-function: steps(6);
     animation-play-state: running;
+}
+
+#morphingSVG{
+    position:absolute;
+    top:60vh;
+    left:23vw;
+}
+
+#cat{
+    visibility: hidden;
 }
 
 

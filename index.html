@@ -104,14 +104,14 @@
             <ul class="technique-gsap"> 
                 <li>anim des autos sur l'axe des x qui n'est pas liée au scroll du chapitre</li> 
                 <li>anim des arbres sur l'axe des x, ils avancent sans être lié au scroll, mais si on termine le scroll elle se termine automatiquement, elle va à l'envers si on y retourne de plus bas dans la page, et retourne au début si on y revient de plus haut dans la page </li> 
-                <li>scrollTrigger 
-                    <ul> 
-                        <li>trigger= #chapitre3</li> 
+                <li>scrollTrigger
+                    <ul>
+                        <li>trigger= #chapitre3</li>
                         <li>scrub= true</li>
                         <li>pin= true</li>
                         <li>toggleActions: play complete reverse reset</li>
-                    </ul> 
-                </li> 
+                    </ul>
+                </li>
             </ul> 
             <div class="textbox chapitre3Text">
                 <span class="text">Je ne sais pas comment je suis arrivé sur cette autoroute, mais heureusement, le trotoire est encore présent, même si c'est très étrange.</span>
@@ -135,8 +135,21 @@
         </section>
 
         <section id="chapitre4">
+            <ul class="technique-gsap"> 
+                <li>anim sur l'axe des x et y sur le div contenant les spritesheets</li> 
+                <li>drawSVG de 0 0 à 0 100% sur le vent.</li>
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger= #chapitre4</li> 
+                        <li>scrub= true</li> 
+                        <li>pin= true</li>
+                        <li>déplacement du div contenant les spritesheets sur l'axe des x et y, pour ensuite faire apparaître la seconde spritesheet et disparaître la première, pour ensuite animer le div contenant les spritesheets sur l'axe des y.</li>
+                    </ul> 
+                </li> 
+                <li>spritesheet de marche animée seulement lorsque le div contenant la spritesheet possède la classe is-running, la spritesheet de chute joue en continu.</li>
+            </ul> 
             <div class="textbox chapitre4Text">
-                <span class="text">J'espère que je ne vais pas tomber dans ce trou qui a été placé d'une manière très anormale en traversant ce pont.</span>
+                <span class="text">J'espère que je ne vais pas tomber dans ce trou qui a été placé d'une manière très suspicieuse en traversant ce pont.</span>
             </div>
             <img class="route3" id="route3" src="img/img_elements_visuels/chapitre4/route3.png" alt="route3">
             <svg width="1099" height="257" viewBox="0 0 1099 257" fill="none"  class="vent vent1" xmlns="http://www.w3.org/2000/svg">
@@ -160,6 +173,23 @@
         </section>
 
         <section id="chapitre5">
+            <ul class="technique-gsap"> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger= #chapitre5</li> 
+                        <li>Parralaxe avec le background, les triangles et le personnage.</li> 
+                    </ul> 
+                </li> 
+                <li>scrollTrigger
+                    <ul>
+                        <li>trigger= .chapitre5Bottom</li>
+                        <li>scrub= true</li>
+                        <li>pin= true</li>
+                        <li>Timeline faisant bouger le div contenant les spritesheet et la bulle</li>
+                    </ul>
+                </li>
+                <li>morphSVG entre la bulle et le chat</li>
+            </ul> 
             <div class="textbox chapitre5Text">
                 <span class="text">Je ne pense pas que je suis supposé être capable de respirer sous l'eau, mais je ne vais pas me plaindre, je me demande ce qui se trouve plus loin.</span>
             </div>
@@ -184,7 +214,13 @@
                 <img class="triangle" id="triangle5" src="img/img_elements_visuels/chapitre5/element_parralaxe.png">
                 <img class="triangle" id="triangle6" src="img/img_elements_visuels/chapitre5/element_parralaxe.png">
             </div>
-            <div class="chapitre5Bottom">
+           
+            <div class="chapitre5Bottom"> 
+                <svg id="morphingSVG" width="115" height="118" viewBox="0 0 115 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="bubble" d="M114.5 55.5C114.5 85.8591 88.9971 110.5 57.5 110.5C26.0029 110.5 0.5 85.8591 0.5 55.5C0.5 25.1409 26.0029 0.5 57.5 0.5C88.9971 0.5 114.5 25.1409 114.5 55.5Z" fill="#4E4389" fill-opacity="0.59"/>
+                    <path id="cat" d="M31.0001 100.5C31.0001 100.5 42.5001 110.5 59.0001 111C75.5001 111.5 87.5001 100.5 87.5001 100.5C87.5001 100.5 103 89.5 107 77C111 64.5 110.5 60.5 107 51C103.5 41.5 92.5001 34 92.5001 34L101 11.5L75.5001 21C75.5001 21 69.5001 18 59.0001 18C48.5001 18 40.5001 21 40.5001 21L17.5001 11.5L26.5001 34C26.5001 34 14.5004 43.5 11.5001 51C8.4998 58.5 8.50012 68.5 11.5001 77C14.5001 85.5 31.0001 100.5 31.0001 100.5Z" fill="#4E4389" fill-opacity="0.59"/>
+                    </svg>
+                    
                 <div class="spritesheet5div2">
                     <div class="spritesheet5 fall spritesheet" id="spritesheet5-2"></div>
                     <div class="spritesheet5 walk spritesheet" id="spritesheet5-3"></div>
@@ -193,6 +229,18 @@
         </section>
 
         <section id="chapitre6">
+            <ul class="technique-gsap"> 
+                <li>anim de l'opacité des nuages ainsi que leurs position y</li> 
+                <li>anim du scale du soleil</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger= #chapitre6</li> 
+                        <li>scrub= true</li>
+                        <li>pin= true</li>
+                        <li>anim du div contenant la spritesheet sur l'axe des y</li> 
+                    </ul> 
+                </li> 
+            </ul> 
             <div class="textbox chapitre6Text">
                 <span class="text">Le ciel est d'une couleur encore plus étrange de plus près, et je ne pense pas que le soleil est sensé être de cette couleur.</span>
             </div>
@@ -210,6 +258,17 @@
         </section>
 
         <section id="chapitre7">
+            <ul class="technique-gsap"> 
+                <li>anim de l'opacité des nuages ainsi que leurs position y</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger= #chapitre7</li> 
+                        <li>scrub= true</li> 
+                        <li>pin= true</li>
+                        <li>Timeline animant le div contenant les spritesheet sur l'axe des x et y et qui fait apparaître et disparaître les spritesheets dans le div au besoin</li>
+                    </ul> 
+                </li>
+            </ul> 
             <div class="textbox chapitre7Text">
                 <span class="text">Cette colline me semble confortable, je pense que je vais aller me reposer dessus.</span>
             </div>
@@ -222,13 +281,12 @@
                 <div class="spritesheet collapse spritesheet7" id="spritesheet7-3"></div>
             </div>
         </section>
-
     </main>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-  <!--  <script src="gsap-plugiciels-payants-nepaspubliersurgit/DrawSVGPlugin3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>-->
+    <script src="gsap-plugiciels-payants-nepaspubliersurgit/DrawSVGPlugin3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
+    <script src="gsap-plugiciels-payants-nepaspubliersurgit/MorphSVGPlugin3.min.js"></script>
     <script src="script/script.js"></script>
 </body>
 </html>
