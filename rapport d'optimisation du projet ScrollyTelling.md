@@ -6,4 +6,24 @@ Il n'y a pas réelement de problèmes présents sur le site, mais pour apprendre
 
 ## Problème #1
 
-Les images sont tous chargées 
+### Images sont tous chargées à l'ouverture de la page.
+
+### Solution: Lazy Loading
+
+### Résultat: Problème réglé
+
+## Problème #2
+
+### Certaines images n'ont pas d'attribut alt.
+
+### Solution: Rajouter un alt à ces images.
+
+### Résultat: Problème réglé
+
+## Problème #3
+
+### La page HTML n'a pas de description meta
+
+### Solution: Ajouter une balise meta description à l'HTML
+
+### Résultat: Problème réglé
