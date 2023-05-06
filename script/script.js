@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(MotionPathPlugin);
 /*gsap.registerPlugin(DrawSVGPlugin);
-gsap.registerPlugin(MotionPathPlugin);*/
-
+gsap.registerPlugin(MorphSVGPlugin);*/
 let timer;
 let spritesheetArr = document.querySelectorAll(".spritesheet");
 let spritesheetCh1 = document.querySelectorAll(".spritesheet1");
@@ -147,7 +147,7 @@ CHAPITRE 4
 const chapitre4 = document.getElementById("chapitre4")
 
 
-gsap.fromTo(".ventSVG",{drawSVG: "0 0"}, {
+/*gsap.fromTo(".ventSVG",{drawSVG: "0 0"}, {
     drawSVG:"0% 100%",
     duration: 2,
     repeat: -1,
@@ -155,7 +155,7 @@ gsap.fromTo(".ventSVG",{drawSVG: "0 0"}, {
     opacity:0,
     stagger: 0.5,
     scrollTrigger: chapitre4,
-});
+});*/
 
 gsap.timeline({scrollTrigger: {
     pin:true,
@@ -252,7 +252,7 @@ gsap.timeline({scrollTrigger: {
 .to("#spritesheet5-3", {opacity: 0, duration: 0}, "<")
 .to("#spritesheet5-2", {opacity: 1, duration: 0}, "<")
 .to("#morphingSVG", {y: "-70vh", duration: 8})
-.to("#bubble", {morphSVG: "#cat", duration: 5}, '<')
+//.to("#bubble", {morphSVG: "#cat", duration: 5}, '<')
 .from(".spritesheet5div2", {y: "-200vh", duration: 4})
 .to("#spritesheet5-2", {opacity: 0, duration: 0})
 .to("#spritesheet5-3", {opacity: 1, duration: 0}, '<')
