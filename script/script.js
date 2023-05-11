@@ -107,9 +107,21 @@ CHAPITRE 3
 const chapitre3 = document.getElementById("chapitre3");
 let spritesheetCh3 = document.querySelectorAll(".spritesheet3");
 
-gsap.from("#auto1", {x:"-150vw", duration:4, ease: "sine.inOut", repeat: -1, scrollTrigger: chapitre3})
-gsap.from("#auto2", {x:"-150vw", duration:5, ease:"sine.inOut", repeat: -1, scrollTrigger: chapitre3}, "-=3")
-gsap.from("#auto3", {x:"-150vw", duration:2, ease:"sine.inOut", repeat: -1, scrollTrigger: chapitre3}, "-=3")
+gsap.from("#auto1", {x:"-150vw", duration:4, ease:"sine.inOut", repeat: -1, scrollTrigger: {
+    trigger: chapitre3,
+    markers:true,
+    end:'400% top',
+    toggleActions: 'play pause resume resume'}})
+gsap.from("#auto2", {x:"-150vw", duration:5, ease:"sine.inOut", repeat: -1, scrollTrigger: {
+    trigger: chapitre3,
+    markers:true,
+    end:'400% top',
+    toggleActions: 'play pause resume resume'}}, "-=3")
+gsap.from("#auto3", {x:"-150vw", duration:2, ease:"sine.inOut", repeat: -1, scrollTrigger: {
+    trigger: chapitre3,
+    markers:true,
+    end:'400% top',
+    toggleActions: 'play pause resume resume'}}, "-=3")
 
 gsap.timeline({scrollTrigger: {
     trigger: chapitre3,
@@ -188,6 +200,7 @@ CHAPITRE 5
 const chapitre5 = document.getElementById("chapitre5")
 
 let hauteurChapitre5 = chapitre5.scrollHeight;
+
 
 gsap.to("#poisson1", {motionPath: {
     path:"#motionPath1",
