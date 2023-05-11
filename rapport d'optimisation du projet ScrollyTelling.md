@@ -10,7 +10,7 @@ Il n'y a pas réelement de problèmes présents sur le site, mais pour apprendre
 
 ### Solution: Lazy Loading
 
-### Résultat: Problème réglé
+### Résultat: Il n'y a pas d'impact visible sur la performance du site, mais le nombre d'objets à charger à l'ouverture de la page a été réduit
 
 ## Problème #2
 
@@ -18,7 +18,7 @@ Il n'y a pas réelement de problèmes présents sur le site, mais pour apprendre
 
 ### Solution: Rajouter un alt à ces images.
 
-### Résultat: Problème réglé
+### Résultat: Le score d'accesibilitée de la page a monté
 
 ## Problème #3
 
@@ -26,10 +26,10 @@ Il n'y a pas réelement de problèmes présents sur le site, mais pour apprendre
 
 ### Solution: Ajouter une balise meta description à l'HTML
 
-### Résultat: Problème réglé
+### Résultat: Le score de SEO et accessibilitée de la page ont monté.
 
 ## Rapport projet ScrollyTelling après optimisation
 
-### Le loadtime n'a pas baissé, mais les scores d'accessibilité et SEO ont montés de 80 à 100.
+### Le loadtime n'a pas baissé, mais les scores d'accessibilité et SEO ont monté de 80 à 100.
 
 [Lien vers PageSpeed Insights - Rapport du 6 mai, 2023, 12:42:52 PM](https://pagespeed.web.dev/analysis/https-externalsip-github-io-alariebrousseau_jacob_scrollytelling/k1gxo9h9ls?form_factor=desktop)
