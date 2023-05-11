@@ -110,18 +110,21 @@ let spritesheetCh3 = document.querySelectorAll(".spritesheet3");
 gsap.from("#auto1", {x:"-150vw", duration:4, ease:"sine.inOut", repeat: -1, scrollTrigger: {
     trigger: chapitre3,
     markers:true,
+    start: 'bottom bottom',
     end:'400% top',
-    toggleActions: 'play pause resume resume'}})
+    toggleActions: 'play pause resume pause'}})
 gsap.from("#auto2", {x:"-150vw", duration:5, ease:"sine.inOut", repeat: -1, scrollTrigger: {
     trigger: chapitre3,
     markers:true,
+    start: 'bottom bottom',
     end:'400% top',
-    toggleActions: 'play pause resume resume'}}, "-=3")
+    toggleActions: 'play pause resume pause'}}, "-=3")
 gsap.from("#auto3", {x:"-150vw", duration:2, ease:"sine.inOut", repeat: -1, scrollTrigger: {
     trigger: chapitre3,
     markers:true,
+    start: 'bottom bottom',
     end:'400% top',
-    toggleActions: 'play pause resume resume'}}, "-=3")
+    toggleActions: 'play pause resume pause'}}, "-=3")
 
 gsap.timeline({scrollTrigger: {
     trigger: chapitre3,
