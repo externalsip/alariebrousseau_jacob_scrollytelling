@@ -3,6 +3,11 @@ gsap.registerPlugin(MotionPathPlugin);
 /*gsap.registerPlugin(DrawSVGPlugin);
 gsap.registerPlugin(MorphSVGPlugin);*/
 let timer;
+
+
+/*////////////////////////////////////////////////////////
+CHAPITRE 1
+/////////////////////////////////////////////////////////*/
 let spritesheetArr = document.querySelectorAll(".spritesheet");
 let spritesheetCh1 = document.querySelectorAll(".spritesheet1");
 const chapitre1 = document.getElementById("chapitre1");
